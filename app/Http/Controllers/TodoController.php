@@ -24,6 +24,7 @@ class TodoController extends Controller
        // return "Hello world!!";
        //blade.php作ったのでControllerの修正
        return view('layouts.app');
+       return view('todo.index');  // 追記　viewの分割で追記
     }
 
     /**

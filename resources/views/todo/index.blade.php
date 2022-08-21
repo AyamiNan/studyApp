@@ -21,12 +21,33 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($todos as $todo)
       <tr>
-        <td class="border px-4 py-2">Todoのタイトルです</td>
-        <td class="border px-4 py-2">Todoの内容です</td>
-        <td class="border px-4 py-2">2022-02-01 00:00:00</td>
-        <td class="border px-4 py-2">2022-02-10 00:00:00</td>
-      </tr>
+        <td class="border px-4 py-2">{{ $todo->title }}</td>
+        <td class="border px-4 py-2">{{ $todo->content }}</td>
+        <td class="border px-4 py-2">{{ $todo->created_at }}</td>
+        <td class="border px-4 py-2">{{ $todo->updated_at }}</td>
+        <td class="border px-4 py-2">
+      <a
+        class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+        href="{{ route('todo.edit', $todo->id) }}"
+      >
+        編集
+      </a>
+    </td>
+    {!! Form::open(['method' => 'delete', 'route' => ['todo.destroy',
+    $todo->id]]) !!}
+    <td class="border px-4 py-2">
+      <button
+        class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+      >
+        削除
+      </button>
+    </td>
+    {!! Form::close() !!}
+  </tr>
+  @endforeach
+      
     </tbody>
   </table>
 </div>

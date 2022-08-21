@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container w-auto inline-block px-8">
-    @yield('content') /*追記*/ 
+    @yield('content') 
       <div class="mt-20 mb-10 flex justify-between">
         <h1 class="text-base">TODO一覧</h1>
         <button

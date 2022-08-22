@@ -17,16 +17,11 @@
       >
         Title
       </label>
-
-      <input
-        class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-        type="text"
-        name="title"
-      />
       {!! Form::textarea('title', $todo->title, ['required', 'class' =>
-  'appearance-none block w-full bg-white text-gray-700 border border-gray-200
-  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
-  focus:border-gray-500', 'placeholder' => '新規Title', 'rows' => '3']) !!}
+      'appearance-none block w-full bg-white text-gray-700 border border-gray-200
+      rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
+      focus:border-gray-500', 'placeholder' => '新規Title', 'rows' => '3']) !!}
+    
     </div>
     <div class="mb-4">
       <label
@@ -38,16 +33,11 @@
   'appearance-none block w-full bg-white text-gray-700 border border-gray-200
   rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
   focus:border-gray-500', 'placeholder' => '新規Todo']) !!}
-      <input
-        class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-        type="text"
-        name="content"
-      />
     </div>
     {!! Form::submit('登録', ['class' => 'bg-blue-500 hover:bg-blue-700 text-white
 font-bold py-2 px-4 rounded']) !!}
+<!-- 閉じる -->
 {!! Form::close() !!}
-  
   </form>
 </div>
 

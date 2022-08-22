@@ -9,7 +9,7 @@
       <a href="{{ route('todo.index') }}">戻る</a>
     </button>
   </div>
-  <form method="POST">
+  {{-- <form method="POST"> --}}
   {!! Form::open(['route' => ['todo.update', $todo->id], 'method' => 'PUT']) !!}
     <div class="mb-4">
       <label
@@ -38,7 +38,7 @@
 font-bold py-2 px-4 rounded']) !!}
 <!-- 閉じる -->
 {!! Form::close() !!}
-  </form>
+  
 </div>
 
 @endsection

@@ -37,7 +37,7 @@ class TodoController extends Controller
         //Hello Worldを出力
        // return "Hello world!!";
        //blade.php作ったのでControllerの修正
-       return view('layouts.app');
+        return view('layouts.app');
        $todos = $this->todo->all();  // 追記
         return view('todo.index', ['todos' => $todos]);  // 編集 indexメソッド編集
     //   return view('todo.index');  // 追記　viewの分割で追記

@@ -38,7 +38,8 @@ class TodoController extends Controller
        // return "Hello world!!";
        //blade.php作ったのでControllerの修正
        // return view('layouts.app');
-       $todos = $this->todo->all();  // 追記
+       //$todos = $this->todo->all();  // 追記
+       $todos = $this->todo->orderby('updated_at', 'desc')->paginate(5);
         return view('todo.index', ['todos' => $todos]);  // 編集 indexメソッド編集
     //   return view('todo.index');  // 追記　viewの分割で追記
     }

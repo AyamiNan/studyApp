@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\Api\TodoController; //Api_1-2.md追記
+use App\Http\Controllers\Api\TodoController; //Api_1-2.md
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('todo/create', [TodoController::class,'store'])->name('api.todo.create');
+Route::post('todo/create', [TodoController::class, 'store'])->name('api.todo.create');

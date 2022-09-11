@@ -21,10 +21,10 @@ class TodoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
- public function store(Request $request)
+public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => ['reqired', 'string', 'max:255'],
+            'title' => ['required', 'string', 'max:255'],
             'content' => ['required', 'string', 'max:255']
         ]);
         $this->todo->fill($validated)->save();

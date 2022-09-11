@@ -2,9 +2,11 @@
 
 namespace Tests\Feature\Api;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
+//use Illuminate\Foundation\Testing\RefreshDatabase; カリキュラムには記述ないのでコメントアウト
+//use Illuminate\Foundation\Testing\WithFaker; カリキュラムには記述ないのでコメントアウト
+use App\Models\Todo;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class TodoControllerTest extends TestCase
 {
@@ -13,10 +15,40 @@ class TodoControllerTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
-    {
-        $response = $this->get('/');
+    use DatabaseTransactions;
 
-        $response->assertStatus(200);
+    public function setUp():void
+    {
+        parent::setUp();
     }
+
+    /**
+     * @test
+     */
+
+    public function Todoの新規作成()
+    {
+        $params = [
+            'title' =>'テスト:タイトル',
+            'content' => 'テスト:内容'
+        ];
+        $res = $this->postJson(route('api.todo.create'), $params);
+        $res->assertOk();
+        $todos = Todo::all();
+
+        $this->assertCount(1, $todos);
+
+        $this-> $todos->first();
+
+        $this->assertEquals($params['title'], $todo->title);
+        $this->assertEquals($params['content'], $todo->content);
+    }
+
+
+   // public function test_example()
+  //  {
+   //     $response = $this->get('/');
+
+    //    $response->assertStatus(200);
+   // }
 }

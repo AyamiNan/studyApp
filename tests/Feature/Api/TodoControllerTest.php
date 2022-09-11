@@ -38,7 +38,7 @@ class TodoControllerTest extends TestCase
 
         $this->assertCount(1, $todos);
 
-        $this-> $todos->first();
+        $todo= $todos->first();
 
         $this->assertEquals($params['title'], $todo->title);
         $this->assertEquals($params['content'], $todo->content);

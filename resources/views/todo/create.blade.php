@@ -9,7 +9,7 @@
       <a href="{{ route('todo.index') }}">戻る</a>
     </button>
   </div>
-  {!! Form::open(['route' => 'todo.null']) !!}
+  {!! Form::open(['route' => 'todo.store']) !!}
 
     <div class="mb-4">
       <label

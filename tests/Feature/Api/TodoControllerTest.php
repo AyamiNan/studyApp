@@ -46,7 +46,7 @@ class TodoControllerTest extends TestCase
 
 //課題
 //Api実装
-//テスト（更新/詳細取得/削除）成功/失敗
+//APIのテスト（更新/詳細取得/削除）成功/失敗
 
 //1 新規作成が失敗するテスト
 //失敗とする条件：POSTされる内容が不十分だった場合
@@ -75,6 +75,7 @@ public function Todoの新規作成失敗()
     //テストケース：成功
     //テストケース：失敗
 
+    //元からあるもの↓
    // public function test_example()
   //  {
    //     $response = $this->get('/');

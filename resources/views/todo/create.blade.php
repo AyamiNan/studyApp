@@ -9,7 +9,7 @@
       <a href="{{ route('todo.index') }}">戻る</a>
     </button>
   </div>
-  //{!! Form::open(['route' => 'todo.null']) !!}//
+  {!! Form::open(['route' => 'todo.null']) !!}
 
     <div class="mb-4">
       <label
@@ -17,12 +17,12 @@
       >
         Title
       </label>
-     /*
+     
      {!! Form::textarea('title', null, ['required', 'class' => 'appearance-none
   block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4
   leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
   'placeholder' => '新規Title', 'rows' => '3']) !!} 
-  */
+  
     </div>
    
     <div class="mb-4">
